@@ -1,5 +1,5 @@
-import React from 'react';
-import { Home, Menu, X, Phone, MapPin } from 'lucide-react';
+import React from "react";
+import { Home, Menu, X, Phone, MapPin } from "lucide-react";
 
 interface HeaderProps {
   currentSection: string;
@@ -12,18 +12,18 @@ const Header: React.FC<HeaderProps> = ({
   currentSection,
   onSectionChange,
   isMobileMenuOpen,
-  setIsMobileMenuOpen
+  setIsMobileMenuOpen,
 }) => {
   const menuItems = [
-    { id: 'inicio', label: 'Inicio', icon: Home },
-    { id: 'servicios', label: 'Servicios' },
-    { id: 'instituciones', label: 'Instituciones' },
-    { id: 'mapa', label: 'Mapa de Servicios', icon: MapPin },
-    { id: 'documentos', label: 'Documentos' },
-    { id: 'noticias', label: 'Noticias' },
-    { id: 'testimonios', label: 'Testimonios' },
-    { id: 'preguntas', label: 'Preguntas Frecuentes' },
-    { id: 'contacto', label: 'Contacto', icon: Phone }
+    { id: "inicio", label: "Inicio", icon: Home },
+    { id: "servicios", label: "Servicios" },
+    { id: "instituciones", label: "Instituciones" },
+    { id: "mapa", label: "Mapa de Servicios", icon: MapPin },
+    { id: "documentos", label: "Documentos" },
+    { id: "noticias", label: "Noticias" },
+    { id: "testimonios", label: "Testimonios" },
+    { id: "preguntas", label: "Preguntas Frecuentes" },
+    { id: "contacto", label: "Contacto", icon: Phone },
   ];
 
   return (
@@ -36,20 +36,22 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             <div>
               <h1 className="text-xl font-bold">Nobsa Te Acompaña</h1>
-              <p className="text-blue-100 text-sm">Servicios para Víctimas del Conflicto</p>
+              <p className="text-blue-100 text-sm">
+                Servicios para Víctimas del Conflicto
+              </p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-1">
-            {menuItems.slice(0, 5).map((item) => (
+            {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => onSectionChange(item.id)}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   currentSection === item.id
-                    ? 'bg-blue-500 text-white'
-                    : 'text-blue-100 hover:bg-blue-500 hover:text-white'
+                    ? "bg-blue-500 text-white"
+                    : "text-blue-100 hover:bg-blue-500 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -79,8 +81,8 @@ const Header: React.FC<HeaderProps> = ({
                   }}
                   className={`flex items-center space-x-3 px-4 py-3 rounded-md text-left transition-colors ${
                     currentSection === item.id
-                      ? 'bg-blue-500 text-white'
-                      : 'text-blue-100 hover:bg-blue-500 hover:text-white'
+                      ? "bg-blue-500 text-white"
+                      : "text-blue-100 hover:bg-blue-500 hover:text-white"
                   }`}
                 >
                   {item.icon && <item.icon size={20} />}

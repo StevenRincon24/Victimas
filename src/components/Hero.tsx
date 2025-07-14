@@ -1,5 +1,6 @@
-import React from 'react';
-import { Heart, Users, FileText, Phone } from 'lucide-react';
+// Suponiendo que la imagen está en la carpeta "public" o importada como módulo
+import React from "react";
+import { Heart, Users, FileText, Phone } from "lucide-react";
 
 interface HeroProps {
   onSectionChange: (section: string) => void;
@@ -9,25 +10,25 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
   const quickActions = [
     {
       icon: Users,
-      title: 'Servicios Disponibles',
-      description: 'Conoce todos los servicios a tu disposición',
-      action: () => onSectionChange('servicios'),
-      color: 'bg-green-500'
+      title: "Servicios Disponibles",
+      description: "Conoce todos los servicios a tu disposición",
+      action: () => onSectionChange("servicios"),
+      color: "bg-green-500",
     },
     {
       icon: FileText,
-      title: 'Documentos',
-      description: 'Descarga formularios y guías importantes',
-      action: () => onSectionChange('documentos'),
-      color: 'bg-orange-500'
+      title: "Documentos",
+      description: "Descarga formularios y guías importantes",
+      action: () => onSectionChange("documentos"),
+      color: "bg-orange-500",
     },
     {
       icon: Phone,
-      title: 'Contacto',
-      description: 'Encuentra ayuda inmediata',
-      action: () => onSectionChange('contacto'),
-      color: 'bg-red-500'
-    }
+      title: "Contacto",
+      description: "Encuentra ayuda inmediata",
+      action: () => onSectionChange("contacto"),
+      color: "bg-red-500",
+    },
   ];
 
   return (
@@ -43,13 +44,25 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
             Nobsa Te Acompaña
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Aquí encontrarás toda la información sobre los servicios disponibles para víctimas del conflicto 
-            en nuestro municipio. Estamos aquí para apoyarte en cada paso del camino.
+            Aquí encontrarás toda la información sobre los servicios disponibles
+            para víctimas del conflicto en nuestro municipio. Estamos aquí para
+            apoyarte en cada paso del camino.
           </p>
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 max-w-2xl mx-auto">
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 max-w-2xl mx-auto mb-8">
             <p className="text-yellow-800 font-medium">
-              <strong>¿Necesitas ayuda urgente?</strong> Llama al <strong>123</strong> o visita cualquiera de nuestros puntos de atención.
+              <strong>¿Necesitas ayuda urgente?</strong> Llama al{" "}
+              <strong>123</strong> o visita cualquiera de nuestros puntos de
+              atención.
             </p>
+          </div>
+
+          {/* Imagen agregada */}
+          <div className="mb-12">
+            <img
+              src="/images/RutaAtencion.jpg" // Ruta relativa a la carpeta "public"
+              alt="Apoyo a víctimas en Nobsa"
+              className="mx-auto rounded-lg shadow-lg max-w-3xl w-full"
+            />
           </div>
         </div>
 
@@ -60,10 +73,14 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer transform hover:scale-105"
               onClick={action.action}
             >
-              <div className={`w-16 h-16 ${action.color} rounded-full flex items-center justify-center mb-4`}>
+              <div
+                className={`w-16 h-16 ${action.color} rounded-full flex items-center justify-center mb-4`}
+              >
                 <action.icon size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">{action.title}</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                {action.title}
+              </h3>
               <p className="text-gray-600 mb-4">{action.description}</p>
               <button className="text-blue-600 font-medium hover:text-blue-800 transition-colors">
                 Ver más →
