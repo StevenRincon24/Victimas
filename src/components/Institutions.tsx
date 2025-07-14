@@ -1,84 +1,77 @@
-import React from 'react';
-import { Building, Users, Scale, Heart, MapPin, Phone, Clock, ExternalLink } from 'lucide-react';
+import React from "react";
+import {
+  Building,
+  Users,
+  Scale,
+  Heart,
+  MapPin,
+  Phone,
+  Clock,
+  ExternalLink,
+} from "lucide-react";
 
 const Institutions: React.FC = () => {
   const institutions = [
     {
-      name: 'Unidad para las Víctimas',
-      type: 'Nacional',
+      name: "Unidad para las Víctimas",
+      type: "Nacional",
       icon: Users,
-      color: 'bg-red-500',
-      description: 'Entidad encargada de la atención integral a víctimas del conflicto armado.',
+      color: "bg-red-500",
+      description:
+        "Entidad encargada de la atención integral a víctimas del conflicto armado.",
       services: [
-        'Registro Único de Víctimas (RUV)',
-        'Atención psicosocial',
-        'Reparación integral',
-        'Indemnización administrativa'
+        "Registro Único de Víctimas (RUV)",
+        "Atención psicosocial",
+        "Reparación integral",
+        "Indemnización administrativa",
       ],
       contact: {
-        address: 'Calle 12 #3-45, Nobsa',
-        phone: '123-456-7890',
-        hours: 'Lunes a Viernes: 8:00 AM - 5:00 PM',
-        website: 'www.unidadvictimas.gov.co'
-      }
+        address:
+          "Sede Nacional Carrera 85D No. 46A – 65 Complejo logístico San Cayetano Conmutador: +57 (601) 7965150",
+        phone: "+57 (601) 7965150",
+        hours: "Lunes a Viernes: 8:00 AM - 4:00 PM",
+        website: "www.unidadvictimas.gov.co",
+      },
     },
     {
-      name: 'Alcaldía de Nobsa',
-      type: 'Municipal',
+      name: "Alcaldía de Nobsa",
+      type: "Municipal",
       icon: Building,
-      color: 'bg-blue-500',
-      description: 'Gobierno local encargado de la implementación de políticas públicas municipales.',
+      color: "bg-blue-500",
+      description:
+        "Gobierno local encargado de la implementación de políticas públicas municipales.",
       services: [
-        'Programas sociales',
-        'Vivienda y servicios públicos',
-        'Educación municipal',
-        'Salud pública'
+        "Programas sociales",
+        "Vivienda y servicios públicos",
+        "Educación municipal",
+        "Salud pública",
       ],
       contact: {
-        address: 'Plaza Principal, Nobsa',
-        phone: '123-456-7891',
-        hours: 'Lunes a Viernes: 7:00 AM - 5:00 PM',
-        website: 'www.nobsa-boyaca.gov.co'
-      }
+        address: "Parque Principal, Nobsa",
+        hours: "Lunes a Viernes: 7:30 AM - 6:00 PM",
+        website: "www.nobsa-boyaca.gov.co",
+      },
     },
     {
-      name: 'Gobernación de Boyacá',
-      type: 'Departamental',
+      name: "Gobernación de Boyacá",
+      type: "Departamental",
       icon: Scale,
-      color: 'bg-green-500',
-      description: 'Entidad departamental que coordina políticas de atención a víctimas.',
+      color: "bg-green-500",
+      description:
+        "Entidad departamental que coordina políticas de atención a víctimas.",
       services: [
-        'Programas departamentales',
-        'Coordinación interinstitucional',
-        'Proyectos de desarrollo',
-        'Apoyo técnico'
+        "Programas departamentales",
+        "Coordinación interinstitucional",
+        "Proyectos de desarrollo",
+        "Apoyo técnico",
       ],
       contact: {
-        address: 'Tunja, Boyacá',
-        phone: '123-456-7892',
-        hours: 'Lunes a Viernes: 8:00 AM - 5:00 PM',
-        website: 'www.boyaca.gov.co'
-      }
+        address: "Tunja, Boyacá",
+        phone: "+(57) 608742 0150",
+        hours: "Lunes a Viernes: 8:00 AM - 5:00 PM",
+        website: "www.boyaca.gov.co",
+      },
     },
-    {
-      name: 'Organizaciones No Gubernamentales',
-      type: 'Privadas',
-      icon: Heart,
-      color: 'bg-purple-500',
-      description: 'Organizaciones de la sociedad civil que brindan apoyo complementario.',
-      services: [
-        'Acompañamiento psicosocial',
-        'Formación y capacitación',
-        'Proyectos productivos',
-        'Fortalecimiento organizacional'
-      ],
-      contact: {
-        address: 'Varios puntos en Nobsa',
-        phone: '123-456-7893',
-        hours: 'Horarios variables',
-        website: 'Consultar directamente'
-      }
-    }
   ];
 
   return (
@@ -89,14 +82,17 @@ const Institutions: React.FC = () => {
             Instituciones que te Apoyan
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Conoce las diferentes entidades que trabajan para brindarte atención 
+            Conoce las diferentes entidades que trabajan para brindarte atención
             y apoyo integral en tu proceso de reparación.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {institutions.map((institution, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+            >
               <div className={`${institution.color} p-6 text-white`}>
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
@@ -113,10 +109,15 @@ const Institutions: React.FC = () => {
                 <p className="text-gray-600 mb-6">{institution.description}</p>
 
                 <div className="mb-6">
-                  <h4 className="font-bold text-gray-800 mb-3">Servicios principales:</h4>
+                  <h4 className="font-bold text-gray-800 mb-3">
+                    Servicios principales:
+                  </h4>
                   <ul className="space-y-2">
                     {institution.services.map((service, serviceIndex) => (
-                      <li key={serviceIndex} className="flex items-start space-x-2">
+                      <li
+                        key={serviceIndex}
+                        className="flex items-start space-x-2"
+                      >
                         <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-gray-700">{service}</span>
                       </li>
@@ -125,19 +126,27 @@ const Institutions: React.FC = () => {
                 </div>
 
                 <div className="border-t pt-6">
-                  <h4 className="font-bold text-gray-800 mb-3">Información de contacto:</h4>
+                  <h4 className="font-bold text-gray-800 mb-3">
+                    Información de contacto:
+                  </h4>
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
                       <MapPin size={18} className="text-gray-500 mt-1" />
-                      <span className="text-gray-700">{institution.contact.address}</span>
+                      <span className="text-gray-700">
+                        {institution.contact.address}
+                      </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Phone size={18} className="text-gray-500" />
-                      <span className="text-gray-700">{institution.contact.phone}</span>
+                      <span className="text-gray-700">
+                        {institution.contact.phone}
+                      </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Clock size={18} className="text-gray-500" />
-                      <span className="text-gray-700">{institution.contact.hours}</span>
+                      <span className="text-gray-700">
+                        {institution.contact.hours}
+                      </span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <ExternalLink size={18} className="text-gray-500" />
@@ -158,8 +167,8 @@ const Institutions: React.FC = () => {
               ¿No sabes a qué institución acudir?
             </h3>
             <p className="text-gray-600 mb-6">
-              Nuestros puntos de atención te ayudarán a identificar la institución 
-              más apropiada para tu caso específico.
+              Nuestros puntos de atención te ayudarán a identificar la
+              institución más apropiada para tu caso específico.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">

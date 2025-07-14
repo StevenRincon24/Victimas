@@ -48,15 +48,8 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
             para víctimas del conflicto en nuestro municipio. Estamos aquí para
             apoyarte en cada paso del camino.
           </p>
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 max-w-2xl mx-auto mb-8">
-            <p className="text-yellow-800 font-medium">
-              <strong>¿Necesitas ayuda urgente?</strong> Llama al{" "}
-              <strong>123</strong> o visita cualquiera de nuestros puntos de
-              atención.
-            </p>
-          </div>
+          
 
-          {/* Imagen agregada */}
           <div className="mb-12">
             <img
               src="/images/RutaAtencion.jpg" // Ruta relativa a la carpeta "public"
