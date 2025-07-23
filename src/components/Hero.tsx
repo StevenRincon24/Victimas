@@ -48,13 +48,17 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
             para víctimas del conflicto en nuestro municipio. Estamos aquí para
             apoyarte en cada paso del camino.
           </p>
-          
 
           <div className="mb-12">
-            <img
-              src="/images/RutaAtencion.jpg" // Ruta relativa a la carpeta "public"
-              alt="Apoyo a víctimas en Nobsa"
+            <iframe
+              src="/docs/RutaAtencion.pdf"
+              title="Vista previa de Ruta de Atención"
               className="mx-auto rounded-lg shadow-lg max-w-3xl w-full"
+              style={{
+                height: "1300px",
+                border: "none", // Sin bordes
+                overflow: "hidden", // Sin scrollbars
+              }}
             />
           </div>
         </div>
