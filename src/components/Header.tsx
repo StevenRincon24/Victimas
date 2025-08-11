@@ -19,11 +19,11 @@ const Header: React.FC<HeaderProps> = ({
     { id: "servicios", label: "Servicios" },
     { id: "instituciones", label: "Instituciones" },
     { id: "mapa", label: "Mapa de Servicios", icon: MapPin },
-    { id: "documentos", label: "Documentos" },
-   // { id: "noticias", label: "Noticias" },
+    //{ id: "documentos", label: "Documentos" },
+    { id: "noticias", label: "Eventos" },
     { id: "testimonios", label: "Testimonios" },
     { id: "preguntas", label: "Preguntas Frecuentes" },
-    { id: "contacto", label: "Contacto", icon: Phone },
+    //  { id: "contacto", label: "Contacto", icon: Phone },
   ];
 
   return (

@@ -8,6 +8,7 @@ import {
   Phone,
   Clock,
   ExternalLink,
+  Mail,
 } from "lucide-react";
 
 const Institutions: React.FC = () => {
@@ -70,6 +71,28 @@ const Institutions: React.FC = () => {
         phone: "+(57) 608742 0150",
         hours: "Lunes a Viernes: 8:00 AM - 5:00 PM",
         website: "www.boyaca.gov.co",
+      },
+    },
+    {
+      name: "Personería Municipal de Nobsa",
+      type: "Municipal",
+      icon: Building,
+      color: "bg-gray-500",
+      description:
+        "Entidad de control del municipio encargada de velar por la defensa de los derechos humanos, la vigilancia de la conducta oficial y la protección de los intereses de la comunidad.",
+      services: [
+        "Defensoría del pueblo y derechos humanos",
+        "Asesoría y acompañamiento jurídico",
+        "Atención a víctimas del conflicto armado",
+        "Veeduría ciudadana y control social",
+        "Recepción de quejas y denuncias contra servidores públicos",
+        "Orientación en trámites municipales",
+      ],
+      contact: {
+        address: "Calle 4 No. 9-51 – Barrio Jerónimo Holguín",
+        phone: "(+57) 313 256 6436",
+        hours: "Lunes a Viernes: 7:30 AM - 6:00 PM",
+        website: "http://www.personeria-nobsa-boyaca.gov.co/",
       },
     },
   ];
@@ -136,12 +159,22 @@ const Institutions: React.FC = () => {
                         {institution.contact.address}
                       </span>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <Phone size={18} className="text-gray-500" />
-                      <span className="text-gray-700">
-                        {institution.contact.phone}
-                      </span>
-                    </div>
+                    {institution.name === "Alcaldía de Nobsa" ? (
+                      <div className="flex items-center space-x-3">
+                        <Mail size={18} className="text-gray-500" />
+                        <span className="text-gray-700">
+                          gestionsocial@nobsa-boyaca.gov.co
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center space-x-3">
+                        <Phone size={18} className="text-gray-500" />
+                        <span className="text-gray-700">
+                          {institution.contact.phone}
+                        </span>
+                      </div>
+                    )}
+
                     <div className="flex items-center space-x-3">
                       <Clock size={18} className="text-gray-500" />
                       <span className="text-gray-700">
@@ -150,9 +183,18 @@ const Institutions: React.FC = () => {
                     </div>
                     <div className="flex items-center space-x-3">
                       <ExternalLink size={18} className="text-gray-500" />
-                      <span className="text-blue-600 hover:text-blue-800 cursor-pointer">
+                      <a
+                        href={
+                          institution.contact.website.startsWith("http")
+                            ? institution.contact.website
+                            : `https://${institution.contact.website}`
+                        }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 cursor-pointer"
+                      >
                         {institution.contact.website}
-                      </span>
+                      </a>
                     </div>
                   </div>
                 </div>

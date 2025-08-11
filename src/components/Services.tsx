@@ -1,97 +1,107 @@
-import React, { useState } from 'react';
-import { Heart, GraduationCap, Home, Briefcase, Brain, Scale, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Heart,
+  GraduationCap,
+  Home,
+  Briefcase,
+  Brain,
+  Scale,
+  ChevronRight,
+} from "lucide-react";
 
 const Services: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('salud');
+  const [selectedCategory, setSelectedCategory] = useState("salud");
 
   const categories = [
     {
-      id: 'salud',
-      name: 'Salud',
+      id: "salud",
+      name: "Salud",
       icon: Heart,
-      color: 'bg-red-100 text-red-600',
+      color: "bg-red-100 text-red-600",
       services: [
-        'Atención médica básica',
-        'Atención especializada',
-        'Medicamentos esenciales',
-        'Salud mental y apoyo psicológico',
-        'Atención materno-infantil',
-        'Programas de rehabilitación'
-      ]
+        "Atención médica básica",
+        "Atención especializada",
+        "Medicamentos esenciales",
+        "Salud mental y apoyo psicológico",
+        "Atención materno-infantil",
+        "Programas de rehabilitación",
+      ],
     },
     {
-      id: 'educacion',
-      name: 'Educación',
+      id: "educacion",
+      name: "Educación",
       icon: GraduationCap,
-      color: 'bg-blue-100 text-blue-600',
+      color: "bg-blue-100 text-blue-600",
       services: [
-        'Acceso a educación básica',
-        'Programas de alfabetización',
-        'Educación para adultos',
-        'Becas y subsidios educativos',
-        'Materiales escolares',
-        'Programas de formación técnica'
-      ]
+        "Acceso a educación básica",
+        "Programas de alfabetización",
+        "Educación para adultos",
+        "Becas y subsidios educativos",
+        "Materiales escolares",
+        "Programas de formación técnica",
+      ],
     },
     {
-      id: 'vivienda',
-      name: 'Vivienda',
+      id: "vivienda",
+      name: "Vivienda",
       icon: Home,
-      color: 'bg-green-100 text-green-600',
+      color: "bg-green-100 text-green-600",
       services: [
-        'Alojamiento temporal',
-        'Subsidios de vivienda',
-        'Mejoramiento de vivienda',
-        'Titulación de predios',
-        'Asesoría jurídica para vivienda',
-        'Programas de construcción'
-      ]
+        "Alojamiento temporal",
+        "Subsidios de vivienda",
+        "Mejoramiento de vivienda",
+        "Titulación de predios",
+        "Asesoría jurídica para vivienda",
+        "Programas de construcción",
+      ],
     },
     {
-      id: 'empleo',
-      name: 'Empleo',
+      id: "empleo",
+      name: "Empleo",
       icon: Briefcase,
-      color: 'bg-yellow-100 text-yellow-600',
+      color: "bg-yellow-100 text-yellow-600",
       services: [
-        'Capacitación laboral',
-        'Intermediación laboral',
-        'Emprendimiento y microcréditos',
-        'Generación de ingresos',
-        'Formación en oficios',
-        'Apoyo a proyectos productivos'
-      ]
+        "Capacitación laboral",
+        "Intermediación laboral",
+        "Emprendimiento y microcréditos",
+        "Generación de ingresos",
+        "Formación en oficios",
+        "Apoyo a proyectos productivos",
+      ],
     },
     {
-      id: 'psicosocial',
-      name: 'Apoyo Psicosocial',
+      id: "psicosocial",
+      name: "Apoyo Psicosocial",
       icon: Brain,
-      color: 'bg-purple-100 text-purple-600',
+      color: "bg-purple-100 text-purple-600",
       services: [
-        'Atención psicológica individual',
-        'Terapia familiar',
-        'Grupos de apoyo',
-        'Atención en crisis',
-        'Programas de resiliencia',
-        'Acompañamiento psicosocial'
-      ]
+        "Atención psicológica individual",
+        "Terapia familiar",
+        "Grupos de apoyo",
+        "Atención en crisis",
+        "Programas de resiliencia",
+        "Acompañamiento psicosocial",
+      ],
     },
     {
-      id: 'reparaciones',
-      name: 'Reparaciones',
+      id: "reparaciones",
+      name: "Reparaciones",
       icon: Scale,
-      color: 'bg-indigo-100 text-indigo-600',
+      color: "bg-indigo-100 text-indigo-600",
       services: [
-        'Reparación administrativa',
-        'Indemnización por vía administrativa',
-        'Restitución de tierras',
-        'Medidas de satisfacción',
-        'Rehabilitación',
-        'Garantías de no repetición'
-      ]
-    }
+        "Reparación administrativa",
+        "Indemnización por vía administrativa",
+        "Restitución de tierras",
+        "Medidas de satisfacción",
+        "Rehabilitación",
+        "Garantías de no repetición",
+      ],
+    },
   ];
 
-  const selectedCategoryData = categories.find(cat => cat.id === selectedCategory);
+  const selectedCategoryData = categories.find(
+    (cat) => cat.id === selectedCategory
+  );
 
   return (
     <section className="py-16 bg-white">
@@ -101,8 +111,8 @@ const Services: React.FC = () => {
             Servicios Disponibles
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Conoce todos los servicios organizados por categorías para que puedas encontrar 
-            exactamente lo que necesitas.
+            Conoce todos los servicios organizados por categorías para que
+            puedas encontrar exactamente lo que necesitas.
           </p>
         </div>
 
@@ -110,7 +120,9 @@ const Services: React.FC = () => {
           {/* Categories Sidebar */}
           <div className="lg:col-span-1">
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-lg font-bold text-gray-800 mb-4">Categorías</h3>
+              <h3 className="text-lg font-bold text-gray-800 mb-4">
+                Categorías
+              </h3>
               <div className="space-y-2">
                 {categories.map((category) => (
                   <button
@@ -118,13 +130,17 @@ const Services: React.FC = () => {
                     onClick={() => setSelectedCategory(category.id)}
                     className={`w-full text-left p-3 rounded-lg transition-colors flex items-center space-x-3 ${
                       selectedCategory === category.id
-                        ? 'bg-blue-600 text-white shadow-md'
-                        : 'hover:bg-gray-200 text-gray-700'
+                        ? "bg-blue-600 text-white shadow-md"
+                        : "hover:bg-gray-200 text-gray-700"
                     }`}
                   >
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                      selectedCategory === category.id ? 'bg-blue-700' : category.color
-                    }`}>
+                    <div
+                      className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                        selectedCategory === category.id
+                          ? "bg-blue-700"
+                          : category.color
+                      }`}
+                    >
                       <category.icon size={20} />
                     </div>
                     <span className="font-medium">{category.name}</span>
@@ -140,12 +156,18 @@ const Services: React.FC = () => {
             {selectedCategoryData && (
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className={`w-16 h-16 rounded-lg flex items-center justify-center ${selectedCategoryData.color}`}>
+                  <div
+                    className={`w-16 h-16 rounded-lg flex items-center justify-center ${selectedCategoryData.color}`}
+                  >
                     <selectedCategoryData.icon size={32} />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-800">{selectedCategoryData.name}</h3>
-                    <p className="text-gray-600">Servicios disponibles en esta categoría</p>
+                    <h3 className="text-2xl font-bold text-gray-800">
+                      {selectedCategoryData.name}
+                    </h3>
+                    <p className="text-gray-600">
+                      Servicios disponibles en esta categoría
+                    </p>
                   </div>
                 </div>
 
@@ -168,7 +190,14 @@ const Services: React.FC = () => {
                     ¿Necesitas más información sobre estos servicios?
                   </p>
                   <p className="text-blue-600">
-                    Visita nuestros puntos de atención o llama al <strong>123</strong> para recibir asesoría personalizada.
+                    Visita nuestros puntos de atención o escribe al correo
+                    electrónico{" "}
+                    <strong>
+                      {selectedCategory === "vivienda"
+                        ? "infraestructura@nobsa-boyaca.gov.co"
+                        : "gestionsocial@nobsa-boyaca.gov.co"}
+                    </strong>{" "}
+                    para recibir asesoría personalizada.
                   </p>
                 </div>
               </div>
