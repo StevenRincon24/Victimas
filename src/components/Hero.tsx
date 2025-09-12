@@ -58,14 +58,6 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
             >
               Red Nacional de Información (RNI)
             </a>
-            <a
-              href="https://www1.funcionpublica.gov.co/web/mipg/resultados-medicion"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition-colors text-center"
-            >
-              Resultados MIPG
-            </a>
           </div>
 
           <div className="mb-12">
