@@ -58,23 +58,28 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
             >
               Red Nacional de Información (RNI)
             </a>
+            <a
+              href="https://www1.funcionpublica.gov.co/web/mipg/resultados-medicion"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition-colors text-center"
+            >
+              Resultados MIPG
+            </a>
           </div>
 
           <div className="mb-12">
-            <p className="text-lg font-bold text-gray">
-              ¿Quieres concer la ruta de atención a población victima del
-              conflicto armado?
-            </p>
-            <p className="text-lg font-bold text-gray">
-              <a
-                href="https://drive.google.com/file/d/1hfpeZ1lC3zJA789sLQoeUC2wUoZN__Vm/view?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 transition-colors"
-              >
-                Haz clic aqui
-              </a>
-            </p>
+            <iframe
+              allow="clipboard-read; clipboard-write"
+              src="/docs/RutaAtencion.pdf"
+              title="Vista previa de Ruta de Atención"
+              className="mx-auto rounded-lg shadow-lg max-w-3xl w-full"
+              style={{
+                height: "1300px",
+                border: "none", // Sin bordes
+                overflow: "hidden", // Sin scrollbars
+              }}
+            />
           </div>
         </div>
 
