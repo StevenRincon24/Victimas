@@ -22,13 +22,7 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
       action: () => onSectionChange("documentos"),
       color: "bg-orange-500",
     },
-    {
-      icon: Phone,
-      title: "Contacto",
-      description: "Encuentra ayuda inmediata",
-      action: () => onSectionChange("contacto"),
-      color: "bg-red-500",
-    },
+    
   ];
 
   return (
@@ -75,7 +69,7 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {quickActions.map((action, index) => (
             <div
               key={index}
