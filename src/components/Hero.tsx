@@ -69,17 +69,20 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
           </div>
 
           <div className="mb-12">
-            <iframe
-              allow="clipboard-read; clipboard-write"
-              src="/docs/RutaAtencion.pdf"
-              title="Vista previa de Ruta de Atención"
-              className="mx-auto rounded-lg shadow-lg max-w-3xl w-full"
-              style={{
-                height: "1300px",
-                border: "none", // Sin bordes
-                overflow: "hidden", // Sin scrollbars
-              }}
-            />
+            <p className="text-lg font-bold text-gray">
+              ¿Quieres concer la ruta de atención a población victima del
+              conflicto armado?
+            </p>
+            <p className="text-lg font-bold text-gray">
+              <a
+                href="https://drive.google.com/file/d/1hfpeZ1lC3zJA789sLQoeUC2wUoZN__Vm/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 transition-colors"
+              >
+                Haz clic aqui
+              </a>
+            </p>
           </div>
         </div>
 
