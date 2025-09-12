@@ -49,6 +49,25 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
             apoyarte en cada paso del camino.
           </p>
 
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-12">
+            <a
+              href="https://www.unidadvictimas.gov.co/red-nacional-de-informacion-rni/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors text-center"
+            >
+              Red Nacional de Información (RNI)
+            </a>
+            <a
+              href="https://www1.funcionpublica.gov.co/web/mipg/resultados-medicion"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition-colors text-center"
+            >
+              Resultados MIPG
+            </a>
+          </div>
+
           <div className="mb-12">
             <iframe
               allow="clipboard-read; clipboard-write"
@@ -62,24 +81,6 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
               }}
             />
           </div>
-        </div>
-        <div className="flex flex-col md:flex-row justify-center gap-4 mb-12">
-          <a
-            href="https://www.unidadvictimas.gov.co/red-nacional-de-informacion-rni/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-colors text-center"
-          >
-            Red Nacional de Información (RNI)
-          </a>
-          <a
-            href="https://www1.funcionpublica.gov.co/web/mipg/resultados-medicion"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition-colors text-center"
-          >
-            Resultados MIPG
-          </a>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
