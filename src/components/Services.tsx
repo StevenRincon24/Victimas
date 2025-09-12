@@ -20,11 +20,9 @@ const Services: React.FC = () => {
       color: "bg-red-100 text-red-600",
       services: [
         "Atención médica básica",
-        "Atención especializada",
-        "Medicamentos esenciales",
+        "Medicamentos",
         "Salud mental y apoyo psicológico",
         "Atención materno-infantil",
-        "Programas de rehabilitación",
       ],
     },
     {
@@ -62,39 +60,8 @@ const Services: React.FC = () => {
       color: "bg-yellow-100 text-yellow-600",
       services: [
         "Capacitación laboral",
-        "Intermediación laboral",
-        "Emprendimiento y microcréditos",
-        "Generación de ingresos",
-        "Formación en oficios",
+        "Emprendimiento",
         "Apoyo a proyectos productivos",
-      ],
-    },
-    {
-      id: "psicosocial",
-      name: "Apoyo Psicosocial",
-      icon: Brain,
-      color: "bg-purple-100 text-purple-600",
-      services: [
-        "Atención psicológica individual",
-        "Terapia familiar",
-        "Grupos de apoyo",
-        "Atención en crisis",
-        "Programas de resiliencia",
-        "Acompañamiento psicosocial",
-      ],
-    },
-    {
-      id: "reparaciones",
-      name: "Reparaciones",
-      icon: Scale,
-      color: "bg-indigo-100 text-indigo-600",
-      services: [
-        "Reparación administrativa",
-        "Indemnización por vía administrativa",
-        "Restitución de tierras",
-        "Medidas de satisfacción",
-        "Rehabilitación",
-        "Garantías de no repetición",
       ],
     },
   ];
@@ -195,6 +162,10 @@ const Services: React.FC = () => {
                     <strong>
                       {selectedCategory === "vivienda"
                         ? "infraestructura@nobsa-boyaca.gov.co"
+                        : selectedCategory === "empleo"
+                        ? "infraestructura@nobsa-boyaca.gov.co - umata@nobsa-boyaca.gov.co"
+                        : selectedCategory === "salud"
+                        ? "saludnobsa@yahoo.com"
                         : "gestionsocial@nobsa-boyaca.gov.co"}
                     </strong>{" "}
                     para recibir asesoría personalizada.

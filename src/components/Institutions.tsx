@@ -45,7 +45,8 @@ const Institutions: React.FC = () => {
         "Programas sociales",
         "Vivienda y servicios públicos",
         "Educación municipal",
-        "Salud pública",
+        "Aseguramiento por salud pública",
+        "Ayuda humanitaria inmediata",
       ],
       contact: {
         address: "Parque Principal, Nobsa",
@@ -82,7 +83,27 @@ const Institutions: React.FC = () => {
         "Entidad de control del municipio encargada de velar por la defensa de los derechos humanos, la vigilancia de la conducta oficial y la protección de los intereses de la comunidad.",
       services: [
         "Defensoría del pueblo y derechos humanos",
-        "Asesoría y acompañamiento jurídico",
+        "Atención a víctimas del conflicto armado",
+        "Veeduría ciudadana y control social",
+        "Recepción de quejas y denuncias contra servidores públicos",
+        "Orientación en trámites municipales",
+      ],
+      contact: {
+        address: "Calle 4 No. 9-51 – Barrio Jerónimo Holguín",
+        phone: "(+57) 313 256 6436",
+        hours: "Lunes a Viernes: 7:30 AM - 6:00 PM",
+        website: "http://www.personeria-nobsa-boyaca.gov.co/",
+      },
+    },
+    {
+      name: "Oficina del SISBEN",
+      type: "Municipal",
+      icon: Building,
+      color: "bg-gray-500",
+      description:
+        "Entidad de control del municipio encargada de velar por la defensa de los derechos humanos, la vigilancia de la conducta oficial y la protección de los intereses de la comunidad.",
+      services: [
+        "Defensoría del pueblo y derechos humanos",
         "Atención a víctimas del conflicto armado",
         "Veeduría ciudadana y control social",
         "Recepción de quejas y denuncias contra servidores públicos",
