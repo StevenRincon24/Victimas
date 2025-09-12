@@ -51,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
 
           <div className="mb-12">
             <iframe
-              allow="clipboard-write"
+              allow="clipboard-read; clipboard-write"
               src="/docs/RutaAtencion.pdf"
               title="Vista previa de Ruta de Atención"
               className="mx-auto rounded-lg shadow-lg max-w-3xl w-full"
