@@ -1,55 +1,60 @@
-import React, { useState } from 'react';
-import { Star, ChevronLeft, ChevronRight, Heart, Quote } from 'lucide-react';
+import React, { useState } from "react";
+import { Star, ChevronLeft, ChevronRight, Heart, Quote } from "lucide-react";
 
 const Testimonials: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
     {
-      name: 'María González',
+      name: "María González",
       age: 45,
-      location: 'Nobsa, Boyacá',
-      story: 'Después de años de incertidumbre, encontré en la Unidad para las Víctimas el apoyo que necesitaba. Gracias a los programas disponibles, pude recibir atención psicológica y apoyo para emprender mi pequeño negocio de tejidos. Hoy soy una mujer independiente y orgullosa de mi trabajo.',
-      service: 'Atención Psicosocial y Proyecto Productivo',
+      location: "Nobsa, Boyacá",
+      story:
+        "Después de años de incertidumbre, encontré en la Unidad para las Víctimas el apoyo que necesitaba. Gracias a los programas disponibles, pude recibir atención psicológica y apoyo para emprender mi pequeño negocio de tejidos. Hoy soy una mujer independiente y orgullosa de mi trabajo.",
+      service: "Atención Psicosocial y Proyecto Productivo",
       rating: 5,
-      category: 'Emprendimiento'
+      category: "Emprendimiento",
     },
     {
-      name: 'Carlos Ramírez',
+      name: "Carlos Ramírez",
       age: 38,
-      location: 'Nobsa, Boyacá',
-      story: 'El proceso de reparación administrativa fue más sencillo de lo que pensaba gracias a la orientación que recibí. El equipo me acompañó en cada paso y me ayudó a entender mis derechos. Ahora mis hijos pueden estudiar tranquilos gracias a las becas educativas.',
-      service: 'Reparación Administrativa y Becas Educativas',
+      location: "Nobsa, Boyacá",
+      story:
+        "El proceso de reparación administrativa fue más sencillo de lo que pensaba gracias a la orientación que recibí. El equipo me acompañó en cada paso y me ayudó a entender mis derechos. Ahora mis hijos pueden estudiar tranquilos gracias a las becas educativas.",
+      service: "Reparación Administrativa y Becas Educativas",
       rating: 5,
-      category: 'Reparación'
+      category: "Reparación",
     },
     {
-      name: 'Ana Patricia Torres',
+      name: "Ana Patricia Torres",
       age: 52,
-      location: 'Nobsa, Boyacá',
-      story: 'Llegué a Nobsa sin nada, solo con mis tres hijos. Los programas de vivienda y las ayudas humanitarias nos dieron la oportunidad de comenzar de nuevo. Hoy tenemos una casa propia y mis hijos están estudiando. Nunca perdí la esperanza.',
-      service: 'Programa de Vivienda y Ayuda Humanitaria',
+      location: "Nobsa, Boyacá",
+      story:
+        "Llegué a Nobsa sin nada, solo con mis tres hijos. Los programas de vivienda y las ayudas humanitarias nos dieron la oportunidad de comenzar de nuevo. Hoy tenemos una casa propia y mis hijos están estudiando. Nunca perdí la esperanza.",
+      service: "Programa de Vivienda y Ayuda Humanitaria",
       rating: 5,
-      category: 'Vivienda'
+      category: "Vivienda",
     },
     {
-      name: 'Jorge Luis Martínez',
+      name: "Jorge Luis Martínez",
       age: 41,
-      location: 'Nobsa, Boyacá',
-      story: 'La atención médica especializada que recibí cambió mi vida. Después del trauma físico que sufrí, pensé que no podría volver a trabajar. Gracias a la rehabilitación y el apoyo psicológico, hoy trabajo en una cooperativa agrícola y me siento útil nuevamente.',
-      service: 'Atención Médica y Rehabilitación',
+      location: "Nobsa, Boyacá",
+      story:
+        "La atención médica especializada que recibí cambió mi vida. Después del trauma físico que sufrí, pensé que no podría volver a trabajar. Gracias a la rehabilitación y el apoyo psicológico, hoy trabajo en una cooperativa agrícola y me siento útil nuevamente.",
+      service: "Atención Médica y Rehabilitación",
       rating: 5,
-      category: 'Salud'
+      category: "Salud",
     },
     {
-      name: 'Esperanza Vargas',
+      name: "Esperanza Vargas",
       age: 35,
-      location: 'Nobsa, Boyacá',
-      story: 'El programa de formación técnica me permitió especializarme en sistemas. Ahora trabajo en la Alcaldía ayudando a otras víctimas a acceder a los servicios digitales. Es gratificante poder devolver un poco de todo lo que recibí.',
-      service: 'Formación Técnica y Empleo',
+      location: "Nobsa, Boyacá",
+      story:
+        "El programa de formación técnica me permitió especializarme en sistemas. Ahora trabajo en la Alcaldía ayudando a otras víctimas a acceder a los servicios digitales. Es gratificante poder devolver un poco de todo lo que recibí.",
+      service: "Formación Técnica y Empleo",
       rating: 5,
-      category: 'Educación'
-    }
+      category: "Educación",
+    },
   ];
 
   const nextTestimonial = () => {
@@ -57,19 +62,27 @@ const Testimonials: React.FC = () => {
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const current = testimonials[currentTestimonial];
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Emprendimiento': return 'bg-green-100 text-green-800';
-      case 'Reparación': return 'bg-blue-100 text-blue-800';
-      case 'Vivienda': return 'bg-orange-100 text-orange-800';
-      case 'Salud': return 'bg-red-100 text-red-800';
-      case 'Educación': return 'bg-purple-100 text-purple-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case "Emprendimiento":
+        return "bg-green-100 text-green-800";
+      case "Reparación":
+        return "bg-blue-100 text-blue-800";
+      case "Vivienda":
+        return "bg-orange-100 text-orange-800";
+      case "Salud":
+        return "bg-red-100 text-red-800";
+      case "Educación":
+        return "bg-purple-100 text-purple-800";
+      default:
+        return "bg-gray-100 text-gray-800";
     }
   };
 
@@ -81,8 +94,8 @@ const Testimonials: React.FC = () => {
             Historias de Esperanza
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Conoce las experiencias de personas que han encontrado apoyo y han logrado 
-            reconstruir sus vidas gracias a los servicios disponibles.
+            Conoce las experiencias de personas que han encontrado apoyo y han
+            logrado reconstruir sus vidas gracias a los servicios disponibles.
           </p>
         </div>
 
@@ -95,12 +108,20 @@ const Testimonials: React.FC = () => {
               </div>
               <div className="p-8 md:p-12">
                 <div className="flex items-center space-x-3 mb-6">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(current.category)}`}>
+                  <span
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(
+                      current.category
+                    )}`}
+                  >
                     {current.category}
                   </span>
                   <div className="flex items-center space-x-1">
                     {Array.from({ length: current.rating }, (_, i) => (
-                      <Star key={i} size={16} className="text-yellow-500 fill-current" />
+                      <Star
+                        key={i}
+                        size={16}
+                        className="text-yellow-500 fill-current"
+                      />
                     ))}
                   </div>
                 </div>
@@ -111,9 +132,15 @@ const Testimonials: React.FC = () => {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="font-bold text-gray-800 text-lg">{current.name}</h4>
-                    <p className="text-gray-600">{current.age} años, {current.location}</p>
-                    <p className="text-blue-600 font-medium mt-1">{current.service}</p>
+                    <h4 className="font-bold text-gray-800 text-lg">
+                      {current.name}
+                    </h4>
+                    <p className="text-gray-600">
+                      {current.age} años, {current.location}
+                    </p>
+                    <p className="text-blue-600 font-medium mt-1">
+                      {current.service}
+                    </p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <button
@@ -141,7 +168,7 @@ const Testimonials: React.FC = () => {
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'
+                  index === currentTestimonial ? "bg-blue-600" : "bg-gray-300"
                 }`}
               />
             ))}
@@ -179,8 +206,8 @@ const Testimonials: React.FC = () => {
             ¿Quieres compartir tu historia?
           </h3>
           <p className="text-gray-600 mb-6">
-            Tu testimonio puede inspirar a otras personas. Si has recibido apoyo y quieres 
-            compartir tu experiencia, nos encantaría escucharte.
+            Tu testimonio puede inspirar a otras personas. Si has recibido apoyo
+            y quieres compartir tu experiencia, nos encantaría escucharte.
           </p>
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
             Compartir mi historia

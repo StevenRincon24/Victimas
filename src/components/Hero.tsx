@@ -22,7 +22,6 @@ const Hero: React.FC<HeroProps> = ({ onSectionChange }) => {
       action: () => onSectionChange("documentos"),
       color: "bg-orange-500",
     },
-    
   ];
 
   return (
