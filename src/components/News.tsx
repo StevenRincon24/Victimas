@@ -23,7 +23,7 @@ const News: React.FC = () => {
         "Día Nacional de la Memoria y Solidaridad con las Víctimas del Conflicto Armado",
       summary:
         "Acto central en la Plaza Principal con participación de comunidades y autoridades locales. ",
-      date: "2025-04-09",
+      date: "2026/04/09",
       category: "conmemoraciones",
       type: "importante",
       readTime: "3 min",
@@ -31,36 +31,38 @@ const News: React.FC = () => {
         "Cada 9 de abril, Colombia recuerda a las víctimas del conflicto armado en un acto de memoria y solidaridad...",
     },
     {
-      title: "Velatón por la Paz y la Memoria",
+      title:
+        " Día Internacional de Conmemoración y Homenaje a las Víctimas del Terrorismo",
       summary:
-        "Jornada nocturna con velas y música en honor a las víctimas del municipio.",
-      date: "2025-06-18",
+        "Celebración del día internacional con homenaje a las víctimas del terrorismo.",
+      date: "2026/08/21",
       category: "memoriales",
       type: "normal",
       readTime: "2 min",
       content:
-        "Este evento busca rendir homenaje a las víctimas y fortalecer la memoria colectiva a través de actividades simbólicas...",
+        "El 21 de agosto, se celebra el Día Internacional de Conmemoración y Homenaje a las Víctimas del Terrorismo, con la participación de autoridades y comunidades locales...",
     },
     {
-      title: "Festival Cultural por la Reconciliación",
+      title:
+        "Día Internacional en Conmemoración de las Víctimas de Actos de Violencia Basados en la Religión o la Creencia.",
       summary:
-        "Encuentro artístico con teatro, música y exposiciones de arte por la paz.",
-      date: "2025-08-15",
-      category: "culturales",
-      type: "importante",
+        "Celebración del Día Internacional en Conmemoración de las Víctimas de Actos de Violencia Basados en la Religión o la Creencia.",
+      date: "2026/08/22",
+      category: "memoriales",
+      type: "normal",
       readTime: "4 min",
       content:
-        "El festival es un espacio para la expresión artística y la sanación colectiva, con participación de grupos culturales locales...",
+        "El 22 de agosto, se celebra el Día Internacional en Conmemoración de las Víctimas de Actos de Violencia Basados en la Religión o la Creencia...",
     },
     {
-      title: "Caminata por la Memoria",
-      summary: "Recorrido simbólico por sitios representativos del municipio.",
-      date: "2025-09-21",
+      title: "Declaración Universal de los Derechos Humanos (DUDH)",
+      summary: "Reconocimiento de derechos humanos en todo el mundo.",
+      date: "2026/12/23",
       category: "memoriales",
       type: "normal",
       readTime: "5 min",
       content:
-        "La caminata busca visibilizar la historia y promover el respeto por los derechos humanos, recordando a las víctimas...",
+        "La Declaración Universal de los Derechos Humanos (DUDH) es una declaración internacional que establece los derechos fundamentales de las personas en todo el mundo...",
     },
   ];
 

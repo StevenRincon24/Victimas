@@ -50,7 +50,7 @@ const Testimonials: React.FC = () => {
       age: 35,
       location: "Nobsa, Boyacá",
       story:
-        "El programa de formación técnica me permitió especializarme en sistemas. Ahora trabajo en la Alcaldía ayudando a otras víctimas a acceder a los servicios digitales. Es gratificante poder devolver un poco de todo lo que recibí.",
+        "El programa de formación técnica me permitió especializarme en sistemas. Ahora trabajo para ayudar a otras víctimas a acceder a los servicios digitales. Es gratificante poder devolver un poco de todo lo que recibí.",
       service: "Formación Técnica y Empleo",
       rating: 5,
       category: "Educación",
@@ -132,9 +132,6 @@ const Testimonials: React.FC = () => {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="font-bold text-gray-800 text-lg">
-                      {current.name}
-                    </h4>
                     <p className="text-gray-600">
                       {current.age} años, {current.location}
                     </p>

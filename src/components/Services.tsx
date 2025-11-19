@@ -18,40 +18,21 @@ const Services: React.FC = () => {
       name: "Salud",
       icon: Heart,
       color: "bg-red-100 text-red-600",
-      services: [
-        "Atención médica básica",
-        "Medicamentos",
-        "Salud mental y apoyo psicológico",
-        "Atención materno-infantil",
-      ],
+      services: ["Atención médica básica", "Medicamentos"],
     },
     {
       id: "educacion",
       name: "Educación",
       icon: GraduationCap,
       color: "bg-blue-100 text-blue-600",
-      services: [
-        "Acceso a educación básica",
-        "Programas de alfabetización",
-        "Educación para adultos",
-        "Becas y subsidios educativos",
-        "Materiales escolares",
-        "Programas de formación técnica",
-      ],
+      services: ["Acceso a educación básica", "Programas de alfabetización"],
     },
     {
       id: "vivienda",
       name: "Vivienda",
       icon: Home,
       color: "bg-green-100 text-green-600",
-      services: [
-        "Alojamiento temporal",
-        "Subsidios de vivienda",
-        "Mejoramiento de vivienda",
-        "Titulación de predios",
-        "Asesoría jurídica para vivienda",
-        "Programas de construcción",
-      ],
+      services: ["Subsidios de vivienda", "Mejoramiento de vivienda"],
     },
     {
       id: "empleo",
@@ -61,7 +42,7 @@ const Services: React.FC = () => {
       services: [
         "Capacitación laboral",
         "Emprendimiento",
-        "Apoyo a proyectos productivos",
+        "Feria de apoyo de servicios",
       ],
     },
   ];
