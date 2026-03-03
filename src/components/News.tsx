@@ -12,6 +12,7 @@ const News: React.FC = () => {
 
   const categories = [
     { id: "todas", name: "Todas las celebraciones" },
+    { id: "convocatorias", name: "Convocatorias" },
     { id: "conmemoraciones", name: "Conmemoraciones" },
     { id: "culturales", name: "Eventos culturales" },
     { id: "memoriales", name: "Actos memoriales" },
@@ -22,7 +23,7 @@ const News: React.FC = () => {
       title:
         "Día Nacional de la Memoria y Solidaridad con las Víctimas del Conflicto Armado",
       summary:
-        "Acto central en la Plaza Principal con participación de comunidades y autoridades locales. ",
+        "Acto central en la Plaza Principal con participación de comunidades y autoridades locales.",
       date: "2026/04/09",
       category: "conmemoraciones",
       type: "importante",
@@ -32,7 +33,7 @@ const News: React.FC = () => {
     },
     {
       title:
-        " Día Internacional de Conmemoración y Homenaje a las Víctimas del Terrorismo",
+        "Día Internacional de Conmemoración y Homenaje a las Víctimas del Terrorismo",
       summary:
         "Celebración del día internacional con homenaje a las víctimas del terrorismo.",
       date: "2026/08/21",
@@ -64,10 +65,40 @@ const News: React.FC = () => {
       content:
         "La Declaración Universal de los Derechos Humanos (DUDH) es una declaración internacional que establece los derechos fundamentales de las personas en todo el mundo...",
     },
+    {
+      title: "Convocatoria TU VOZ CONSTRUYE TERRITORIO",
+      summary:
+        "Te invitamos a conformar el Consejo Municipal de Paz, Reconciliación y Convivencia",
+      date: "2026/02/09",
+      category: "convocatorias",
+      type: "importante",
+      readTime: "6 min",
+      content:
+        "Haz parte del Concejo Municipal de Paz, Reconciliación y Convivencia  de Nobsa 🕊️, un espacio de participación ciudadana donde construimos políticas de paz y promovemos el respeto por los derechos humanos. \n\nDesde la Secretaría de Gobierno extendemos esta convocaria a organizaciones sociales, comunidad víctima, juntas de acción comunal o sociedad civil organizada, este espacio es para ti. \n\nPostúlate antes del 13 de febrero y sigamos consolidando juntos a Nobsa como territorio de paz, ¡A Otro Nivel! ✌️🤍",
+      images: [
+        "/images/Convocatoria1.jpeg",
+        "/images/Convocatoria2.jpeg",
+        "/images/Convocatoria3.jpeg",
+      ],
+    },
+
+    {
+      title: "I Oferta Presencial y a Distancia SENA 2026",
+      summary:
+        "Convocatoria para postulantes a la I Oferta Presencial y a Distancia SENA 2026",
+      date: "2026/01/29",
+      category: "convocatorias",
+      type: "importante",
+      readTime: "6 min",
+      content:
+        "📢 La Alcaldía Municipal de Nobsa te invita a postularte a la I Oferta Presencial y a Distancia SENA 2026. \n\n 🗓️ Inscripciones: del 29 de enero al 3 de febrero \n\n Programas técnicos, auxiliares, operarios y tecnólogos en modalidad presencial y virtual en Boyacá. \n\n👉 Inscríbete en: www.betowa.sena.edu.co \n\nℹ️ La población víctima y vulnerable cuenta con acceso preferente. \n\n¡Proyectate hacia tu futuro y fórmate con el SENA!",
+      images: ["/images/Sena1.jpeg", "/images/Sena2.jpeg"],
+    },
   ];
 
   const filteredNews = news.filter(
-    (item) => selectedCategory === "todas" || item.category === selectedCategory
+    (item) =>
+      selectedCategory === "todas" || item.category === selectedCategory,
   );
 
   const getTypeColor = (type: string) => {
@@ -134,7 +165,7 @@ const News: React.FC = () => {
                   <div className="flex items-center space-x-3 mb-4">
                     <div
                       className={`flex items-center space-x-2 px-3 py-1 rounded-full border ${getTypeColor(
-                        article.type
+                        article.type,
                       )}`}
                     >
                       {getTypeIcon(article.type)}
@@ -142,21 +173,39 @@ const News: React.FC = () => {
                         {article.type === "urgente"
                           ? "Urgente"
                           : article.type === "importante"
-                          ? "Importante"
-                          : "Noticia"}
+                            ? "Importante"
+                            : "Noticia"}
                       </span>
                     </div>
                   </div>
+
                   <h3 className="text-xl font-bold text-gray-800 mb-3">
                     {article.title}
                   </h3>
+
                   <p className="text-gray-600 mb-4 text-sm">
                     {article.summary}
                   </p>
-                  <p className="text-black-600 mb-4 text-sm">
+
+                  <p className="text-black-600 mb-4 text-sm text-justify whitespace-pre-line">
                     {article.content}
                   </p>
-                  <div className="flex items-center justify-between text-sm text-gray-500">
+
+                  {/* ✅ Mostrar imágenes solo si existen */}
+                  {article.images && (
+                    <div className="mt-4 space-y-4">
+                      {article.images.map((img, i) => (
+                        <img
+                          key={i}
+                          src={img}
+                          alt={`Imagen convocatoria ${i + 1}`}
+                          className="rounded-lg w-full h-auto"
+                        />
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="flex items-center justify-between text-sm text-gray-500 mt-4">
                     <div className="flex items-center space-x-3">
                       <div className="flex items-center space-x-1">
                         <Calendar size={14} />
