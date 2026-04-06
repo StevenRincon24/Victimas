@@ -65,6 +65,18 @@ const News: React.FC = () => {
       content:
         "La Declaración Universal de los Derechos Humanos (DUDH) es una declaración internacional que establece los derechos fundamentales de las personas en todo el mundo...",
     },
+
+    {
+      title: "Conmemoración 9 de abril",
+      summary: "Honraremos a las víctimas del conflicto armado en Colombia.",
+      date: "2026/04/09",
+      category: "convocatorias",
+      type: "importante",
+      readTime: "6 min",
+      content:
+        "Este 9️⃣ de abril, honraremos a las víctimas del conflicto armado en Colombia. \n\nEste es un día para reflexionar sobre la violencia, honrar a las víctimas y reconocer su resiliencia. 🕊️ \n\nDesde Nobsa, hacemos un llamado la NO repetición y a la construcción de paz. \n\n¡Únete a la conmemoración! 🙏\n\nTe esperamos a partir de las 5:00 p. m., en el Auditorio Municipal. ",
+      images: ["/images/Conmemoraciones.jpeg"],
+    },
     {
       title: "Convocatoria TU VOZ CONSTRUYE TERRITORIO",
       summary:
@@ -154,12 +166,13 @@ const News: React.FC = () => {
         </div>
 
         {/* News Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {/* News Grid tipo masonry */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 mb-12 space-y-6">
           {filteredNews.length > 0 ? (
             filteredNews.map((article, index) => (
               <article
                 key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow break-inside-avoid mb-6"
               >
                 <div className="p-6">
                   <div className="flex items-center space-x-3 mb-4">
@@ -191,15 +204,15 @@ const News: React.FC = () => {
                     {article.content}
                   </p>
 
-                  {/* ✅ Mostrar imágenes solo si existen */}
+                  {/* Imágenes */}
                   {article.images && (
                     <div className="mt-4 space-y-4">
                       {article.images.map((img, i) => (
                         <img
                           key={i}
                           src={img}
-                          alt={`Imagen convocatoria ${i + 1}`}
-                          className="rounded-lg w-full h-auto"
+                          alt={`Imagen ${i + 1}`}
+                          className="rounded-lg w-full h-auto object-cover"
                         />
                       ))}
                     </div>
